@@ -14,6 +14,11 @@ npm install
 npm start
 ```
 
+TODO
+- [ ] Improve markdown conversion
+- [ ] Add TODO list support etc
+- [ ] Revisit style choices
+
 Made with
 - HTML/CSS
 - React

@@ -29,7 +29,7 @@ class App extends Component {
         </div>
         <div>
           <h1>Markdown Output</h1>
-          <div className = "border border-dark" dangerouslySetInnerHTML = {{__html: marked(this.state.markdown)}}>
+          <div className = "border border-dark output" dangerouslySetInnerHTML = {{__html: marked(this.state.markdown)}}>
           </div>
         </div>
       </div>
