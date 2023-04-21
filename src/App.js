@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import FormGroup from 'react-bootstrap/lib/FormGroup';
-import ControlLabel from 'react-bootstrap/lib/ControlLabel';
-import FormControl from 'react-bootstrap/lib/FormControl';
-
-let marked = require("marked");
+import Form from 'react-bootstrap/Form';
+import { marked } from 'marked';
 
 class App extends Component {
 
@@ -20,16 +17,16 @@ class App extends Component {
     return (
       <div className="App container">
         <div>
-          <FormGroup controlId="FormControlsTextArea">
-            <ControlLabel>Markdown Input</ControlLabel>
-            <FormControl componentClass="textarea" placeholder="Enter Markdown"
+          <Form.Group controlId="FormControlsTextArea">
+            <Form.Label>Markdown Input</Form.Label>
+            <Form.Control componentClass="textarea" placeholder="Enter Markdown"
             value = {this.state.markdown} onChange = {(event)=>this.updateMarkdown(event.target.value)}
-            ></FormControl>
-          </FormGroup>
+            ></Form.Control>
+          </Form.Group>
         </div>
         <div>
           <h1>Markdown Output</h1>
-          <div className = "border border-dark output" dangerouslySetInnerHTML = {{__html: marked(this.state.markdown)}}>
+          <div className = "border border-dark output" dangerouslySetInnerHTML = {{__html: marked.parse(this.state.markdown)}}>
           </div>
         </div>
       </div>
