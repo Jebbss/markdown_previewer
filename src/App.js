@@ -20,7 +20,7 @@ class App extends Component {
                     <div className="col h-50">
                         <Form.Group controlId="FormControlsTextArea" className="h-75">
                             <h1>Markdown Input</h1>
-                            <Form.Control as="textarea" placeholder="Enter Markdown" className="h-100 border border-dark"
+                            <Form.Control as="textarea" placeholder="Enter Markdown" className="h-100 border border-dark overflow-auto"
                                           value={this.state.markdown}
                                           onChange={(event) => this.updateMarkdown(event.target.value)}
                             ></Form.Control>
@@ -28,7 +28,7 @@ class App extends Component {
                     </div>
                     <div className="col h-50">
                         <h1>Markdown Output</h1>
-                        <div className="h-75 border border-dark output"
+                        <div className="h-75 border border-dark output overflow-auto"
                              dangerouslySetInnerHTML={{__html: marked.parse(this.state.markdown)}}>
                         </div>
                     </div>
