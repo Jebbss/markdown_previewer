@@ -2,6 +2,7 @@
   "name": "markdown_previewer",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jebbss.github.io/markdown_previewer/",
   "dependencies": {
     "@types/jest": "^29.5.1",
     "@types/node": "^18.15.13",
