@@ -7,7 +7,7 @@ import {Component} from "react";
 class App extends Component {
 
     state = {
-        markdown: ""
+        markdown: "# Title \n***Enter Markdown***"
     }
 
     updateMarkdown = (markdown: string): void => {
@@ -33,6 +33,9 @@ class App extends Component {
                              dangerouslySetInnerHTML={{__html: marked.parse(this.state.markdown)}}>
                         </div>
                     </div>
+                </div>
+                <div className="row justify-content-center align-items-center">
+                    <a href="https://daringfireball.net/projects/markdown/syntax">Syntax</a>
                 </div>
             </div>
         );
