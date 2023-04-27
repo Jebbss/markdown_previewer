@@ -1,17 +1,46 @@
-.App {
-  text-align: center;
+.page-div {
+    text-align: center;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
 }
 
-textarea {
-  resize: none;
+.markdown-divs {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-.output {
-  text-align: left;
-  padding: 1rem;
+.input-div {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.input-form-group {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.output-div {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-text-area {
+    display: flex;
+
+    height: 100%;
+    resize: none;
+}
+
+.output-text-area {
+    text-align: left;
+    padding: 1rem;
 }
