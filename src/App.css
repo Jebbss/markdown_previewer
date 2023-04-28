@@ -5,13 +5,22 @@
     --ch-eggshell: #eae8e0;
 }
 
-.page-div {
+.page{
     text-align: center;
     display: flex;
     height: 100%;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: var(--ch-yellow-500);
     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.page-padding {
+    display: flex;
+    height: 95%;
+    width: 95%;
+    flex-direction: column;
 }
 
 .row-95h{

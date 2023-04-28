@@ -15,26 +15,29 @@ class App extends Component {
 
     render() {
         return (
-            <div className="page-div">
-                <div className="row-95h">
-                    <div className="input-div half-screen">
-                        <div className="input-form-group">
-                            <h1 className="heading">Markdown Input</h1>
-                            <textarea placeholder="Enter Markdown" className="input-text-area text-area"
+            <div className="page">
+                <div className="page-padding">
+                    <div className="row-95h">
+                        <div className="input-div half-screen">
+                            <div className="input-form-group">
+                                <h1 className="heading">Markdown Input</h1>
+                                <textarea placeholder="Enter Markdown" className="input-text-area text-area"
                                           value={this.state.markdown}
                                           onChange={(event) => this.updateMarkdown(event.target.value)}
-                            ></textarea>
+                                ></textarea>
+                            </div>
+                        </div>
+                        <div className="output-div half-screen">
+                            <h1>Markdown Output</h1>
+                            <div className="output-text-area text-area"
+                                 dangerouslySetInnerHTML={{__html: marked.parse(this.state.markdown)}}>
+                            </div>
                         </div>
                     </div>
-                    <div className="output-div half-screen">
-                        <h1>Markdown Output</h1>
-                        <div className="output-text-area text-area"
-                             dangerouslySetInnerHTML={{__html: marked.parse(this.state.markdown)}}>
-                        </div>
+                    <div className="syntax-link-div">
+                        <a className="syntax-link" href="https://daringfireball.net/projects/markdown/syntax"
+                           target="_blank">Syntax Guide</a>
                     </div>
-                </div>
-                <div className="syntax-link-div">
-                    <a className="syntax-link" href="https://daringfireball.net/projects/markdown/syntax" target="_blank">Syntax Guide</a>
                 </div>
             </div>
         );
