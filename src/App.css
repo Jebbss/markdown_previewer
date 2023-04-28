@@ -1,19 +1,28 @@
+:root {
+    --ch-gray-950: #242420;
+    --ch-orange-600: #dd6b20;
+    --ch-yellow-500: #ffe450;
+    --ch-eggshell: #eae8e0;
+}
+
 .page-div {
     text-align: center;
     display: flex;
     height: 100%;
     flex-direction: column;
+    background-color: var(--ch-yellow-500);
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
-.markdown-divs {
+.row-95h{
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 95vh;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
-.input-div {
+.half-screen {
     width: 45%;
     height: 100%;
     display: flex;
@@ -26,21 +35,60 @@
     height: 100%;
 }
 
-.output-div {
-    width: 45%;
-    height: 100%;
+.syntax-link-div {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+}
+
+.syntax-link {
+    color: var(--ch-gray-950);
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.syntax-link:hover {
+    color: var(--ch-orange-600);
+}
+
+.text-area {
+    height: 100%;
+    resize: none;
+    border-radius: 15px;
+    border: none;
+    padding: 15px;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.text-area::-webkit-scrollbar {
+    width: 12px;
+    background-color:var(--ch-gray-950);
+    border-radius: 0 15px 15px 0;
+}
+
+.text-area::-webkit-scrollbar-track {
+    border-radius: 15px;
+}
+
+.text-area::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background-color:var(--ch-eggshell);
 }
 
 .input-text-area {
     display: flex;
-
-    height: 100%;
-    resize: none;
+    background-color: var(--ch-eggshell);
 }
 
 .output-text-area {
+    display: block;
     text-align: left;
-    padding: 1rem;
+    color: var(--ch-eggshell);
+    background-color: var(--ch-gray-950);
 }
